@@ -1,6 +1,6 @@
-import React from 'react'
-import UserClipItem from './userClipItem'
-import UserClipFilter from './userClipFilter'
+import React from 'react';
+import UserClipItem from './userClipItem';
+import UserClipFilter from './userClipFilter';
 
 class UserClipsList extends React.Component {
   state = {

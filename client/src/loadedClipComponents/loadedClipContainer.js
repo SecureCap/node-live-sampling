@@ -1,8 +1,8 @@
-import React from 'react'
-import LoadedClipWave from './loadedClipWave'
-import LoadedClipSpectral from './loadedClipSpectral'
-import LoadedClipEdit from './loadedClipEdit'
-import LoadedClipCircle from './loadedClipCircle'
+import React from 'react';
+import LoadedClipWave from './loadedClipWave';
+import LoadedClipSpectral from './loadedClipSpectral';
+import LoadedClipEdit from './loadedClipEdit';
+import LoadedClipCircle from './loadedClipCircle';
 import * as d3 from 'd3'
 
 class LoadedClipContainer extends React.Component {
