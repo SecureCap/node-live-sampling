@@ -1,7 +1,8 @@
 import React from 'react'
 import UserClipsList from '../userClipsComponents/userClipsList'
 import LoadedClipContainer from '../loadedClipComponents/loadedClipContainer'
-import s3 from ''
+import AWS from 'aws-sdk';
+//import s3 from 's3'
 
 const BASEURL = 'http://localhost:3000/clips'
 const API_KEY = AKIAINEQOTOTWDZUM6IQ
@@ -60,7 +61,7 @@ class AudioContainer extends React.Component {
   }
 
     uploadClip = (event) => {
-      const client = s3.init(API_KEY)
+      const client = AWS.init(API_KEY)
       client.pick({}).then(res => {
         let files = res.filesUploaded
         files.forEach(file => {
