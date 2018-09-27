@@ -1,7 +1,7 @@
 import React from 'react'
 import UserClipsList from '../userClipsComponents/userClipsList'
 import LoadedClipContainer from '../loadedClipComponents/loadedClipContainer'
-import s3 from ''
+import s3 from 's3'
 
 const BASEURL = 'http://localhost:3000/clips'
 const API_KEY = AKIAINEQOTOTWDZUM6IQ
