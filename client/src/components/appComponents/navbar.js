@@ -40,7 +40,7 @@ const NavBar = (props) => {
   return (
     <div id="navBar">
       <div id="logoTitle">
-        <img src='../orangeLogo.png' alt="Behind the Music"/>
+        <img src='../orangeLogo.png' alt="node live sampling"/>
       </div>
       <div>
         {userExists(props)}
