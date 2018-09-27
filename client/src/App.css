@@ -1,5 +1,22 @@
+body {
+  background-color: rgb(33, 33, 33);
+  font-family: 'Archivo Black', sans-serif;
+  color: rgb(255, 255, 255)
+}
+
+button {
+  background-color: rgb(20, 20, 20);
+  border: none;
+  outline: none;
+  color: rgb(8, 190, 190);
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
+  margin: 0px 2.5px 0px 2.5px;
+}
+
 .App {
   text-align: center;
+  margin-top: 5px;
 }
 
 .App-logo {
@@ -21,6 +38,341 @@
 .App-intro {
   font-size: large;
 }
+
+a {
+  text-decoration: none;
+  color: rgb(180, 180, 180)
+}
+
+.AudioClip a {
+  color: rgb(0, 0, 0);
+}
+
+.LoggedIn {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto 1100px auto;
+  grid-template-rows: 60px;
+  grid-gap: 15px 15px;
+}
+
+.NotLoggedIn {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: auto 1100px auto;
+  grid-template-rows: 60px;
+  grid-gap: 15px 15px;
+}
+
+#navBar {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+  background-color: rgb(60, 60, 60);
+  color: rgb(255, 165, 0);
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.61);
+}
+
+#logoTitle {
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#logoTitle img {
+  width: 50%;
+  height: 100%;
+}
+#userLogin {
+  display: flex;
+}
+
+#userLogin h3{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#Analysis {
+  display: flex;
+  justify-content: space-around;
+}
+
+#playAudioClip {
+  display: flex;
+  justify-content: space-around;
+}
+
+#audioContainer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 800px;
+  grid-template-rows: 300px auto;
+  grid-gap: 15px 15px;
+
+}
+
+.form {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 165, 0);
+  display: block;
+  justify-content: center;
+  grid-template-columns: 200px 800px;
+  grid-template-rows: 300px auto;
+  grid-gap: 15px 15px;
+  background-color: rgb(60, 60, 60);
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.61);
+}
+
+.form h1{
+  margin-bottom: 0px;
+}
+
+.form input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: rgb(20, 20, 20);
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+.AudioClip {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-content: center;
+  text-align: center;
+}
+
+
+#editForm {
+  color: rgb(255, 165, 0);
+  text-align: center;
+}
+
+#delete {
+  color: rgb(255, 0, 0);
+  width: 200px;
+  height: 32px;
+  font-size: 16px;
+  background-color: rgb(20, 20, 20);
+  border: none;
+}
+
+#editForm input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: rgb(20, 20, 20);
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+#editForm #submit {
+  width: 200px;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  color: rgb(8, 190, 190);
+}
+
+#edit {
+  color: rgb(8, 190, 190);
+  width: 200px;
+  height: 32px;
+  font-size: 16px;
+  background-color: rgb(20, 20, 20);
+  margin-bottom: 5px;
+  border: none;
+}
+
+.signupInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupInput h3 {
+  margin-right: 10px;
+}
+
+#submit {
+  width: 200px;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  color: rgb(8, 190, 190);
+}
+
+
+#userClipsList {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  height: 100%;
+  max-height: 768px;
+  font-size: 11pt;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgb(255, 165, 0);
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.61);
+  background-color: rgb(60, 60, 60);
+}
+
+#userClipsList button {
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#clipList {
+  padding: 10px 10px;
+  margin: 10px 5px 10px 5px;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  height: 75%;
+  list-style: none;
+  text-align: left;
+  background-color: rgb(33, 33, 33);
+  color: rgb(180, 180, 180);
+  overflow: auto;
+}
+
+#filterClips input{
+  background-color: rgb(20, 20, 20);
+  outline: none;
+  margin: 2px;
+  color: rgb(8, 190, 190);
+}
+
+#uploadClipButton {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+#loadedClipContainer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  width: 100%;
+  /* height: 100%; */
+
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 300px 368px auto;
+  grid-gap: 10px 0px;
+  background-color: rgb(60, 60, 60);
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.61);
+}
+
+.loadedClipWave {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  width: 100%;
+  height: 100%;
+
+  /* border: 2px solid black; */
+  /* box-shadow: 4px 4px 0px 0px black; */
+}
+
+.loadedClipWave button {
+  margin-bottom: 10px;
+}
+
+.loadedClipWave h1 {
+  color: rgb(180, 180, 180);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+
+#spectralCanvas {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  /* grid-row-end: 3; */
+  width: 95%;
+  height: 100%;
+
+  background-color: rgb(33, 33, 33);
+  border: 1px solid black;
+  /* box-shadow: 4px 4px 0px 0px black; */
+}
+
+
+#clipName {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#transport {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.audioClipUpdate {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#waveform {
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(33, 33, 33);
+}
+
+#demoWave {
+  width: 760px;
+  height: 200px;
+  border: 2px solid rgb(0, 0, 0);
+  /* background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 50%,rgba(255,255,255,0.6) 50%), url('../orangeform.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; */
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
