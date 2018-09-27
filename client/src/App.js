@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import NavBar from './appComponents/navbar'
-import AudioContainer from './appComponents/audioContainer'
-import Login from './appComponents/login'
-import Signup from './appComponents/signup'
+import NavBar from './appComponents/navbar';
+import AudioContainer from './appComponents/audioContainer';
+import Login from './appComponents/login';
+import Signup from './appComponents/signup';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 
