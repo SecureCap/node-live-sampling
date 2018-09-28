@@ -240,7 +240,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: rgb(255, 165, 0);
+  color: rgb(180, 180, 180);
   border: 2px solid black;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.61);
   background-color: rgb(60, 60, 60);
