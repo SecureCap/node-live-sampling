@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(33, 33, 33);
+  background-color: rgb(153, 145, 145);
   font-family: 'Archivo Black', sans-serif;
   color: rgb(255, 255, 255)
 }
@@ -8,7 +8,7 @@ button {
   background-color: rgb(20, 20, 20);
   border: none;
   outline: none;
-  color: rgb(8, 190, 190);
+  color: rgb(180, 180, 180);
   padding: 10px 10px 10px 10px;
   font-size: 16px;
   margin: 0px 2.5px 0px 2.5px;
@@ -74,8 +74,8 @@ a {
   padding-left: 10px;
   padding-right: 10px;
   justify-content: space-between;
-  background-color: rgb(60, 60, 60);
-  color: rgb(255, 165, 0);
+  background-color: rgb(0, 0, 0);
+  color: rgb(180, 180, 180);
   width: 100%;
   height: 100%;
   border: 2px solid black;
@@ -132,14 +132,13 @@ a {
   grid-row-start: 2;
   width: 100%;
   height: 100%;
-  color: rgb(255, 165, 0);
+  color: rgb(180, 180, 180);
   display: block;
   justify-content: center;
   grid-template-columns: 200px 800px;
   grid-template-rows: 300px auto;
   grid-gap: 15px 15px;
-  background-color: rgb(60, 60, 60);
-  border: 2px solid black;
+  background-color: rgb(0, 0, 0);
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.61);
 }
 
@@ -169,7 +168,7 @@ a {
 
 
 #editForm {
-  color: rgb(255, 165, 0);
+  color: rgb(180, 180, 180);
   text-align: center;
 }
 
@@ -197,11 +196,11 @@ a {
   width: 200px;
   background-color: rgb(20, 20, 20);
   border: none;
-  color: rgb(8, 190, 190);
+  color: rgb(180, 180, 180);
 }
 
 #edit {
-  color: rgb(8, 190, 190);
+  color: rgb(180, 180, 180);
   width: 200px;
   height: 32px;
   font-size: 16px;
@@ -241,7 +240,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: rgb(255, 165, 0);
+  color: rgb(180, 180, 180);
   border: 2px solid black;
   box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.61);
   background-color: rgb(60, 60, 60);
