@@ -9,8 +9,6 @@ const app = express();
 const routes = require('./routes')
 const PORT = process.env.PORT || 3001
 const User = require('./models/User')
-const dotenv = require('dotenv')
-dotenv.config()
 
 
 const passportOpts = {
@@ -60,7 +58,8 @@ app.post('/api/auth/register', (req, res) => {
         if (err) {
             return res.json({ success: false, message: "username taken", err: err.message })
         }
-        return res.json({ success: true, message: "Successfully created a new user!" })
+        // Redirect the user to /auth/login so they can be logged in after registering
+        res.redirect(307, "/api/auth/login")
     })
 })
 
@@ -68,6 +67,7 @@ app.post('/api/auth/login', (req, res) => {
     if (!req.body.username || !req.body.password) {
         return res.json({ success: false, message: "Please provide a username and password" })
     }
+
     User.findOne({
         username: req.body.username
     }, (err, user) => {
@@ -79,6 +79,7 @@ app.post('/api/auth/login', (req, res) => {
                 if (!err && isMatch) {
                     const jwtSecret = process.env.JWT_SECRET || 'secretkey'
                     // TODO: Let's consider adding an expiration timer to each token
+                    //       so that we can keep it in LocalStorage in the ui
                     const token = jwt.sign({_id: user._id}, jwtSecret)
                     res.json({ success: true, token: "JWT " + token})
                 } else {
