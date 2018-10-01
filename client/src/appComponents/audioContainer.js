@@ -2,10 +2,16 @@ import React from 'react';
 import UserClipsList from '../userClipComponents/userClipList';
 import LoadedClipContainer from '../loadedClipComponents/loadedClipContainer';
 import AWS from 'aws-sdk';
-//import s3 from 's3'
+import s3 from 's3'
 
 const BASEURL = 'http://localhost:3000/clips'
-const API_KEY = 'AKIAINEQOTOTWDZUM6IQ'
+const fs = require('fs');
+const AWS = require('aws-sdk');
+
+const s3 = new AWS.S3({
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+});
 
 class AudioContainer extends React.Component {
 
@@ -32,7 +38,7 @@ class AudioContainer extends React.Component {
     if (this.refs.loadedClip.source) {
       this.refs.loadedClip.source.stop()
     }
-    let id = parseInt(event.target.id)
+    let id = parseInt(event.target.id, 10)
     let file = this.state.clips.filter(clip => clip.id === id)
     this.setState({
       loaded_clip: {
@@ -61,7 +67,7 @@ class AudioContainer extends React.Component {
   }
 
     uploadClip = (event) => {
-      const client = AWS.init(API_KEY)
+      const client = AWS.init(s3)
       client.pick({}).then(res => {
         let files = res.filesUploaded
         files.forEach(file => {
