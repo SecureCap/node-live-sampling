@@ -2,12 +2,10 @@ import React from 'react';
 import UserClipsList from '../userClipComponents/userClipList';
 import LoadedClipContainer from '../loadedClipComponents/loadedClipContainer';
 import AWS from 'aws-sdk';
-import s3 from 's3'
+
 
 const BASEURL = 'http://localhost:3000/clips'
 const fs = require('fs');
-const AWS = require('aws-sdk');
-
 const s3 = new AWS.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
