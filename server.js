@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express();
 const routes = require('./routes')
 const PORT = process.env.PORT || 3001
@@ -9,6 +10,20 @@ const User = require('./models/User')
 
 // Setup passport
 require('./config/passport')
+
+// Setup cors
+const whitelist = ['http://localhost:3000', 'http://localhost:3001']
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+app.use(cors(corsOptions))
 
 // Setup body parser and cookie parser
 app.use(bodyParser.urlencoded({ extended: true }));
