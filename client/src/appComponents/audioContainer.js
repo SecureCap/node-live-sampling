@@ -4,8 +4,8 @@ import LoadedClipContainer from '../loadedClipComponents/loadedClipContainer';
 import AWS from 'aws-sdk';
 
 
-const BASEURL = 'http://localhost:3000/clips'
-const fs = require('fs');
+const BASEURL = 'http://localhost:3001/clips'
+//const fs = require('fs');
 const s3 = new AWS.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY

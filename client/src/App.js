@@ -6,8 +6,8 @@ import Signup from './appComponents/signup';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 
-const LOGINURL = 'http://localhost:3000/login'
-const USERSURL = 'http://localhost:3000/users'
+const LOGINURL = 'http://localhost:3000/api/auth/register'
+const USERSURL = 'http://localhost:3000/api/auth/register'
 
 class App extends Component {
 
@@ -27,7 +27,7 @@ class App extends Component {
         password: password
       })
     })
-    .then(res => res.json())
+    .then(res => res.text())
   }
 
   LogIn = (event) => {
@@ -62,7 +62,7 @@ class App extends Component {
         password: password,
         password_confirmation: passwordConfirmation
       })
-    }).then(res => res.json())
+    }).then(res => res.text())
   }
 
   createUser = (event) => {
@@ -96,12 +96,12 @@ class App extends Component {
   }
 
   fetchUser(id) {
-    return fetch(`${USERSURL}/${id}`).then(res => res.json())
+    return fetch(`${USERSURL}/${id}`).then(res => res.text())
   }
 
   componentDidMount() {
     if (localStorage["user_id"]) {
-      let id = parseInt(localStorage.user_id, 10)
+      let id = parseInt(localStorage.user_id)
       this.fetchUser(id)
       .then(data => {
         this.setState({
