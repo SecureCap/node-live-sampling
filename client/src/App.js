@@ -6,7 +6,7 @@ import Signup from './appComponents/signup';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 
-const LOGINURL = 'http://localhost:3000/api/auth/register'
+const LOGINURL = 'http://localhost:3000/api/auth/login'
 const USERSURL = 'http://localhost:3000/api/auth/register'
 
 class App extends Component {
@@ -101,7 +101,7 @@ class App extends Component {
 
   componentDidMount() {
     if (localStorage["user_id"]) {
-      let id = parseInt(localStorage.user_id)
+      let id = parseFloat(localStorage.user_id)
       this.fetchUser(id)
       .then(data => {
         this.setState({
