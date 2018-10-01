@@ -9,6 +9,13 @@ const app = express();
 const routes = require('./routes')
 const PORT = process.env.PORT || 3001
 const User = require('./models/User')
+const fs = require('fs');
+const AWS = require('aws-sdk');
+
+const s3 = new AWS.S3({
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+});
 
 
 const passportOpts = {
@@ -43,6 +50,16 @@ app.use(bodyParser.json());
 
 // Serve up static assets
 app.use(express.static('client/build'))
+
+//You can use the Express router that is bundled with this module to answer calls to /s3/sign
+app.use('/s3', require('react-s3-uploader/s3router')({
+    bucket: "MyS3Bucket",
+    region: 'us-east-1', //optional
+    signatureVersion: 'v4', //optional (use for some amazon regions: frankfurt and others)
+    headers: {'Access-Control-Allow-Origin': '*'}, // optional
+    ACL: 'private', // this is default
+    uniquePrefix: true // (4.0.2 and above) default is true, setting the attribute to false preserves the original filename in S3
+}));
 
 
 // Setup API routes

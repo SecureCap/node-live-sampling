@@ -101,7 +101,7 @@ class App extends Component {
 
   componentDidMount() {
     if (localStorage["user_id"]) {
-      let id = parseInt(localStorage.user_id)
+      let id = parseInt(localStorage.user_id, 10)
       this.fetchUser(id)
       .then(data => {
         this.setState({
