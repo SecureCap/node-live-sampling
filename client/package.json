@@ -8,6 +8,7 @@
     "axios": "^0.18.0",
     "d3": "^5.7.0",
     "filestack-js": "^1.6.0",
+    "fs": "^0.0.1-security",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
