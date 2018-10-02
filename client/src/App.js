@@ -28,7 +28,7 @@ class App extends Component {
         password: password
       })
     })
-    .then(res => res.json())
+    .then(res => res.text())
   }
 
   LogIn = (event) => {
@@ -63,7 +63,7 @@ class App extends Component {
         password: password,
         password_confirmation: passwordConfirmation
       })
-    }).then(res => res.json())
+    }).then(res => res.text())
   }
 
   createUser = (event) => {
