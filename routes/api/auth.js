@@ -48,6 +48,8 @@ router.post('/login', (req, res) => {
     })
 })
 
+
+
 router.get('/logout', (req, res) => {
     req.logout()
     res.status(200).send('Successfully logged out!')
