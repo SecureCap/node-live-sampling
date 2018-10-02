@@ -28,7 +28,7 @@ class App extends Component {
         password: password
       })
     })
-    .then(res => res.json())
+    .then(res => res.text())
   }
 
   LogIn = (event) => {
@@ -63,7 +63,7 @@ class App extends Component {
         password: password,
         password_confirmation: passwordConfirmation
       })
-    }).then(res => res.json())
+    }).then(res => res.text())
   }
 
   createUser = (event) => {
@@ -73,7 +73,6 @@ class App extends Component {
     let passwordConfirmation = event.target.passwordConfirmation.value
     this.fetchCreateUser(username, password, passwordConfirmation)
     .then(data => {
-      console.log(data);
       if(data.message === "Invalid Information. Please try again") {
         this.setState({
           logged_in: false,
