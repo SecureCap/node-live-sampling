@@ -3,3 +3,4 @@
 node_modules
 AWS_ACCESS_KEY.txt
 AWS_SECRET_ACCESS_KEY.txt
+.vscode
