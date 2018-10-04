@@ -5,7 +5,7 @@ import AWS from 'aws-sdk';
 
 
 const BASEURL = 'http://localhost:3001/clips'
-//const fs = require('fs');
+
 const s3 = new AWS.S3({
     accessKeyId: process.env.AWS_ACCESS_KEY,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
@@ -208,9 +208,14 @@ class AudioContainer extends React.Component {
       <div id="audioContainer">
         <UserClipsList clips={this.state.clips} sortAscClips={this.sortAscClips} sortDescClips={this.sortDescClips} findAudioFile={this.findAudioFile} uploadClip={this.uploadClip}/>
         <LoadedClipContainer ref="loadedClip" updateClip={this.updateClip} endEdit={this.endEdit} updateTitle={this.updateTitle} updateArtist={this.updateArtist} stopEdit={this.stopEdit} deleteClip={this.deleteClip} clip={this.state.loaded_clip} edit_song={this.state.edit_song} editSongSelection={this.editSongSelection}/>
+      
       </div>
+      
+        
     )
   }
+  
 }
+
 
 export default AudioContainer

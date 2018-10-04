@@ -4,6 +4,7 @@ import AudioContainer from './appComponents/audioContainer';
 import Login from './appComponents/login';
 import Signup from './appComponents/signup';
 import {Route, Switch, Redirect} from 'react-router-dom';
+import FileUploader from './FileUploader';
 import './App.css';
 
 
@@ -148,6 +149,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.whatToRender()}
+        <FileUploader />
       </div>
     );
   }
