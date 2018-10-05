@@ -1,7 +1,8 @@
 import React from 'react';
 import UserClipsList from '../userClipComponents/userClipList';
 import LoadedClipContainer from '../loadedClipComponents/loadedClipContainer';
-import AWS from 'aws-sdk';
+import FileUploader from '../FileUploader';
+import AWS from 'aws-sdk'
 
 
 const BASEURL = 'http://localhost:3001/clips'
@@ -65,7 +66,7 @@ class AudioContainer extends React.Component {
   }
 
     uploadClip = (event) => {
-      const client = AWS.init(s3)
+      const client = FileUploader.init(s3)
       client.pick({}).then(res => {
         let files = res.filesUploaded
         files.forEach(file => {
